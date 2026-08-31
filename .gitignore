@@ -1,0 +1,10 @@
+.env
+*.pem
+*.key
+secrets.yaml
+__pycache__/
+*.pyc
+.DS_Store
+kind-config.yaml
+*.kubeconfig
+.kube/

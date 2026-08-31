@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atlas-deployment
+  labels:
+    app: atlas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atlas
+  template:
+    metadata:
+      labels:
+        app: atlas
+    spec:
+      containers:
+        - name: atlas-service
+          image: atlas-service:v1.4.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: atlas-secret
+                  key: API_TOKEN
