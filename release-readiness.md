@@ -10,7 +10,7 @@ and factual. Do not paste secret values anywhere in this file.
 - Git tag:
 - Docker image name and version:
 - Date/time:
-- Prepared by:
+- Prepared by:ojfenf
 
 ## 2. Risk assessment (Task 1 — Docker)
 
