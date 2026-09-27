@@ -16,8 +16,12 @@ jobs:
       - name: Build image (validation only)
         run: docker build -t atlas-service:${{ github.ref_name }} .
 
-      - name: Show registry token
-        run: echo "Using token ${{ secrets.REGISTRY_TOKEN }}"
+     - name: Use registry token
+  env:
+    REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+  run: |
+    echo "Registry token is configured"
+    # Use "$REGISTRY_TOKEN" here when required
 
   production-deploy:
     needs: release-check
