@@ -20,7 +20,7 @@ jobs:
         env:
           REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
         run: echo "Registry token is configured"
-    # Use "$REGISTRY_TOKEN" here when required
+    # Use "$REGISTRY_TOKEN" here when requiredf
   
 
   production-deploy:
